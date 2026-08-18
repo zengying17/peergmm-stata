@@ -9,35 +9,13 @@ The command requires Stata 16 or newer.
 
 ## Installation
 
-### Use a local clone
-
-Clone or download this repository, then add its `ado` and `help` directories to
-the Stata search path:
-
-```stata
-adopath + "/full/path/to/peergmm-stata/ado"
-adopath + "/full/path/to/peergmm-stata/help"
-mata: mata mlib index
-```
-
-Check the installation with:
-
-```stata
-which peer_cra
-help peer_cra
-```
-
-### Install in Stata's personal ado directory
-
-Run `sysdir` in Stata to locate the `PERSONAL` directory. Copy these five files
-into that directory:
+Installation is still under development. For now, copy these four files into your working directory:
 
 ```text
-ado/peer_cra.ado
-ado/peer_cra_p.ado
-ado/lpeergmm.mlib
-ado/lpeergmm.mata
-help/peer_cra.sthlp
+peer_cra.ado
+peer_cra_p.ado
+lpeergmm.mlib
+peer_cra.sthlp
 ```
 
 The compiled Mata library is the normal fast path. If it was compiled by a
@@ -62,13 +40,6 @@ Run `help peer_cra` for all numerical options and stored results.
 
 ```stata
 peer_cra Y, urn(urn_id) group(group_id) own(x1 x2) peer(x1)
-
-matrix list e(b)
-matrix list e(V)
-
-predict double yhat, fitted
-predict double resid, residuals
-predict double urn_fe, alpha
 ```
 
 The coefficient named `lambda` is the endogenous peer-effect parameter.
