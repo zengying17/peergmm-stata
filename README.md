@@ -18,10 +18,6 @@ lpeergmm.mlib
 peer_cra.sthlp
 ```
 
-The compiled Mata library is the normal fast path. If it was compiled by a
-newer Stata release and cannot be loaded, `peer_cra` compiles the shipped
-`lpeergmm.mata` source in the current Stata session.
-
 ## Syntax
 
 ```stata
