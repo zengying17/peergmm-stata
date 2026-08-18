@@ -57,12 +57,12 @@ After estimation, `predict` supports:
 
 ## Repository contents
 
-- `ado/peer_cra.ado`: estimation command.
-- `ado/peer_cra_p.ado`: postestimation `predict` command.
-- `ado/lpeergmm.mlib`: compiled Mata library.
-- `help/peer_cra.sthlp`: Stata help file.
+- peer_cra.ado`: estimation command.
+- peer_cra_p.ado`: postestimation `predict` command.
+- lpeergmm.mlib`: compiled Mata library.
+- peer_cra.sthlp`: Stata help file.
 
-Keep all four files in `ado/` together. 
+Keep all four files together. 
 
 ## Companion R package
 
